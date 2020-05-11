@@ -53,10 +53,16 @@ export default function Login() {
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" className="login-form-button">
+        <Button
+          type="primary"
+          size="large"
+          htmlType="submit"
+          className="login-form-button"
+        >
           登陆
         </Button>
-        <Button htmlType="submit" className="login-form-button">
+
+        <Button htmlType="submit" size="large" className="login-form-button">
           注册账号
         </Button>
       </Form.Item>
