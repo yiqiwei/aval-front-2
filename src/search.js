@@ -18,10 +18,12 @@ export default function SearchNav() {
   );
 
   return (
-    <Search
-      placeholder="请输入搜索内容"
-      onSearch={value => console.log(value)}
-      enterButton
-    />
+    <div className="padding-1">
+      <Search
+        placeholder="请输入搜索内容"
+        onSearch={value => console.log(value)}
+        enterButton
+      />
+    </div>
   );
 }

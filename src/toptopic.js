@@ -14,8 +14,7 @@ export default function Toptopic() {
   }
   return (
     <Card className="margin-1">
-      <ThunderboltOutlined />
-      话题榜单 Top5
+      <ThunderboltOutlined /> 话题榜单 Top5
       <Tabs defaultActiveKey="1" onChange={callback}>
         <TabPane tab="作品名称" key="1">
           <Row>

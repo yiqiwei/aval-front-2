@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./index.css";
-import { Layout, Menu, Breadcrumb, Card, Row, Col } from "antd";
+import { Layout, Menu, Breadcrumb, Card, Row, Col, Pagination } from "antd";
 import Imgslider from "./imgslider";
 import Topnav from "./topnav";
 import Sidemenu from "./sidemenu";
@@ -34,6 +34,7 @@ export default function Home() {
             {" "}
             <Author />
             <Author />
+            <Pagination className="margin-1" defaultCurrent={1} total={50} />
           </Col>
           <Col span={6}>
             {" "}
