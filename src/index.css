@@ -39,3 +39,45 @@ body {
 div#root {
   height: 100%;
 }
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.margin-1 {
+  margin: 1rem;
+}
+
+.margin-sm {
+  margin: 3px;
+}
+
+.padding-1 {
+  padding: 1rem;
+}
+
+.align-right {
+  text-align: right;
+  float: right;
+}
+
+.mainwidth {
+  max-width: 1360px;
+  margin: auto;
+}
+
+.margin-bt-sm {
+  margin: 6px;
+}
+
+.margin-l-sm {
+  margin-left: 5px;
+}

@@ -47,7 +47,7 @@ export default function Login() {
         <Form.Item name="remember" valuePropName="checked" noStyle>
           <Checkbox>记住密码</Checkbox>
         </Form.Item>
-        <a className="login-form-forgot" href="">
+        <a className="login-form-forgot" href="./signup">
           忘记密码？
         </a>
       </Form.Item>
