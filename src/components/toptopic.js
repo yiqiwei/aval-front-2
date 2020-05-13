@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Card, Col, Row, Avatar, Tabs } from "antd";
 import { FileOutlined, RobotOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./index.css";
+import "../index.css";
 import { ThunderboltOutlined } from "@ant-design/icons";
 
 export default function Toptopic() {

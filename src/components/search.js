@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Input } from "antd";
 import { AudioOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./index.css";
+import "../index.css";
 
 export default function SearchNav() {
   const { Search } = Input;

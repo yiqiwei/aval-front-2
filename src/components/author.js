@@ -15,7 +15,7 @@ import {
 } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./index.css";
+import "../index.css";
 import {
   CrownOutlined,
   HeartOutlined,
@@ -81,7 +81,7 @@ export default function Author() {
             <SmileOutlined /> 关注
           </Button>
         </Col>
-        <Col span={20}>
+        <Col span={20} className="align-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
           et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis
@@ -89,6 +89,18 @@ export default function Author() {
           mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
           mollis orci, sed rhoncus pronin sapien nunc accuan eget.
           <br />
+          <Avatar
+            className="margin-author-img"
+            shape="square"
+            size={64}
+            src="https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+          />
+          <Avatar
+            className="margin-author-img"
+            shape="square"
+            size={64}
+            src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2149&q=80"
+          />
           <br />
           <Row>
             <Tag>
