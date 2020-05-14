@@ -5,7 +5,6 @@ import "../index.css";
 import { Layout, Menu, Breadcrumb, Card, Row, Col, Pagination } from "antd";
 import Imgslider from "./imgslider";
 
-import Sidemenu from "./sidemenu";
 import Author from "./author";
 import Hotcontent from "./hotcontent";
 import Toptopic from "./toptopic";

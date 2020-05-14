@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Card, Col, Row, Avatar, Tabs } from "antd";
-import { FileOutlined, RobotOutlined } from "@ant-design/icons";
+import { Card, Col, Row, Avatar, Tabs, Button } from "antd";
+import {
+  FileOutlined,
+  RobotOutlined,
+  FileTextOutlined
+} from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
 import { ThunderboltOutlined } from "@ant-design/icons";
@@ -15,6 +19,9 @@ export default function Toptopic() {
   return (
     <Card className="margin-1">
       <ThunderboltOutlined /> 话题榜单 Top5
+      <Button className="gap" type="link">
+        <FileTextOutlined /> 查看全部
+      </Button>
       <Tabs defaultActiveKey="1" onChange={callback}>
         <TabPane tab="作品名称" key="1">
           <Row>

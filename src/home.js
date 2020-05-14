@@ -1,71 +1,68 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "antd/dist/antd.css";
 import "./index.css";
-import { Col, Row, Avatar, Button, Divider, Layout, Menu } from "antd";
+import {
+  Col,
+  Row,
+  Avatar,
+  Button,
+  Divider,
+  Layout,
+  Menu,
+  Badge,
+  Dropdown,
+  Popover
+} from "antd";
 import SearchNav from "./components/search";
 import MainContent from "./components/main-content";
-import {
-  UserOutlined,
-  EditOutlined,
-  ShopOutlined,
-  RocketOutlined
-} from "@ant-design/icons";
+import TaskHeader from "./components/taskheader";
+import ProfileHeader from "./components/profile-popover";
+import AddNewArticle from "./components/add-article";
+import MailHeader from "./components/mail-header";
+import Author from "./components/author";
+
+import { HomeOutlined } from "@ant-design/icons";
+import AllHotAuthors from "./components/all-hot-authors";
+
+const { Header, Footer, Content } = Layout;
 
 export default function Home() {
-  const { Header, Footer, Content } = Layout;
   return (
     <Router>
       <Layout>
         <Header>
-          <div className="mainwidth">
+          <div className="mainwidth margin-1">
+            <span className="logo">LOGO</span>
+            <span className="margin-l logo">
+              <Link to="/" replace>
+                {" "}
+                <HomeOutlined />{" "}
+              </Link>
+            </span>{" "}
+            <span className="gap">
+              <SearchNav />
+            </span>
             <Menu className="align-right" theme="dark" mode="horizontal">
-              <Menu.Item key="1">
-                <RocketOutlined />
-                登陆
-              </Menu.Item>
-              <Menu.Item key="2">
-                <UserOutlined />
-                注册
-              </Menu.Item>
+              <ProfileHeader />
+              <span className="gap">
+                <TaskHeader />
+              </span>
 
-              <Button
-                className="align-right"
-                type="primary"
-                size="small"
-                className="margin-sm margin-l"
-              >
-                <EditOutlined />
-                投稿
-              </Button>
+              <MailHeader />
+              <span className="gap">
+                {" "}
+                <AddNewArticle />{" "}
+              </span>
             </Menu>
           </div>
         </Header>
         <Content>
-          {" "}
-          <Route
-            exact
-            path="/"
-            render={() => {
-              return <MainContent />;
-            }}
-          />
-          <Route
-            exact
-            path="/login"
-            render={() => {
-              return 123;
-            }}
-          />
-          <Route
-            exact
-            path="/signup"
-            render={() => {
-              return 456;
-            }}
-          />
+          <Route path="/" component={MainContent} exact />
+          <Route path="/all-hot-authors" component={AllHotAuthors} exact />
         </Content>
         <Footer className="align-center">Footer content goes here...</Footer>
       </Layout>

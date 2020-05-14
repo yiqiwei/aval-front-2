@@ -1,10 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Card, Col, Row, Avatar, Tabs } from "antd";
+import { Card, Col, Row, Avatar, Tabs, Button } from "antd";
 import { UserOutlined, RobotOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
-import { FireOutlined } from "@ant-design/icons";
+import { FireOutlined, FileTextOutlined } from "@ant-design/icons";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import AllHotAuthors from "./all-hot-authors";
+import Home from "../home";
 
 export default function Hotcontent() {
   const { TabPane } = Tabs;
@@ -12,9 +17,15 @@ export default function Hotcontent() {
   function callback(key) {
     console.log(key);
   }
+
   return (
     <Card className="margin-1">
-      <FireOutlined /> 人气榜单 Top5
+      <FireOutlined /> 人气榜单 Top5{" "}
+      <Link to="/all-hot-authors" replace>
+        <Button className="gap" type="link">
+          <FileTextOutlined /> 查看全部
+        </Button>
+      </Link>
       <Tabs defaultActiveKey="1" onChange={callback}>
         <TabPane tab="综合榜" key="1">
           <Row>

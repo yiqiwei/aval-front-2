@@ -128,3 +128,27 @@ div#root {
 .ant-carousel .slick-list {
   height: 300px;
 }
+
+.logo {
+  color: #ffffff;
+}
+
+.font-sm {
+  font-size: 0.9em;
+}
+
+.task-popover {
+  text-align: left;
+  max-width: 100%;
+}
+
+.task-item {
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  margin-bottom: 5px;
+}
+
+.gap {
+  margin-left: 10px;
+  margin-right: 10px;
+}
