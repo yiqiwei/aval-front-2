@@ -1,34 +1,46 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button, Checkbox, Card, Row, Col } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./index.css";
+import "../index.css";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Home from "../home";
 
-export default function Login() {
+const Loginform = () => {
+  const onFinish = values => {
+    console.log("Success:", values);
+  };
+
+  const onFinishFailed = errorInfo => {
+    console.log("Failed:", errorInfo);
+  };
+
   return (
     <Form
-      name="normal_login"
-      className="login-form"
+      name="basic"
       initialValues={{
         remember: true
       }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
     >
       <Form.Item
-        name="username"
+        label="手机号码"
+        name="mobile"
         rules={[
           {
             required: true,
-            message: "请输入手机号码"
+            message: "请输入手机号"
           }
         ]}
       >
-        <Input
-          prefix={<UserOutlined className="site-form-item-icon" />}
-          placeholder="请输入手机号码"
-        />
+        <Input />
       </Form.Item>
+
       <Form.Item
+        label="登陆密码"
         name="password"
         rules={[
           {
@@ -37,35 +49,38 @@ export default function Login() {
           }
         ]}
       >
-        <Input
-          prefix={<LockOutlined className="site-form-item-icon" />}
-          type="password"
-          placeholder="请输入密码"
-        />
+        <Input.Password />
       </Form.Item>
-      <Form.Item>
-        <Form.Item name="remember" valuePropName="checked" noStyle>
-          <Checkbox>记住密码</Checkbox>
+
+      <Form.Item name="remember" valuePropName="checked">
+        <Checkbox>记住密码</Checkbox>
+      </Form.Item>
+      <Router>
+        <Form.Item>
+          <Link to="/" replace>
+            <Button type="primary" htmlType="submit" block>
+              登陆
+            </Button>
+          </Link>
+          <Button className="margin-t" block>
+            注册
+          </Button>
         </Form.Item>
-        <a className="login-form-forgot" href="./signup">
-          忘记密码？
-        </a>
-      </Form.Item>
-
-      <Form.Item>
-        <Button
-          type="primary"
-          size="large"
-          htmlType="submit"
-          className="login-form-button"
-        >
-          登陆
-        </Button>
-
-        <Button htmlType="submit" size="large" className="login-form-button">
-          注册账号
-        </Button>
-      </Form.Item>
+        <Route path="/" component={Home} exact />
+      </Router>
     </Form>
+  );
+};
+
+export default function Login() {
+  return (
+    <div className="login-card">
+      <Row>
+        <Col span={15} className="login-panel-bg" />
+        <Col span={9} className="padding-1">
+          <Loginform />
+        </Col>
+      </Row>
+    </div>
   );
 }

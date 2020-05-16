@@ -11,57 +11,40 @@ import {
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
+import { Link } from "react-router-dom";
 
 export default function MailHeader() {
   const menumail = (
     <Menu>
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.alipay.com/"
-        >
+        <Link to="/message" replace>
+          {" "}
           <FileImageOutlined /> 推荐 <Badge count={5} />
-        </a>
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.taobao.com/"
-        >
+        <Link to="/message" replace>
+          {" "}
           <FileOutlined /> 评论 <Badge count={6} />
-        </a>
+        </Link>
       </Menu.Item>
 
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.taobao.com/"
-        >
+        <Link to="/message" replace>
           <LikeOutlined /> 点赞 <Badge count={2} />
-        </a>
+        </Link>
       </Menu.Item>
 
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.taobao.com/"
-        >
+        <Link to="/message" replace>
           <StarOutlined /> 超赞 <Badge count={3} />
-        </a>
+        </Link>
       </Menu.Item>
 
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.taobao.com/"
-        >
+        <Link to="/message" replace>
           <MailOutlined /> 私信 <Badge count={3} />
-        </a>
+        </Link>
       </Menu.Item>
     </Menu>
   );

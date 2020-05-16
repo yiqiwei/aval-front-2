@@ -18,6 +18,7 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
 import { ShakeOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 export default function ProfileHeader() {
   const profilepop = (
@@ -45,15 +46,22 @@ export default function ProfileHeader() {
           <h3>投稿 35</h3>
         </Col>
       </Row>
+      <Link to="/profile" replace>
+        <Button type="primary" size="small" className="margin-sm">
+          个人中心
+        </Button>
+      </Link>
       <Button type="primary" size="small" className="margin-sm">
-        个人中心
+        我的收藏
       </Button>
       <Button size="small" type="primary" className="margin-sm">
         充值中心
       </Button>
-      <Button size="small" type="primary" className="margin-sm">
-        退出登录
-      </Button>
+      <Link to="/login" replace>
+        <Button size="small" type="primary" className="margin-sm">
+          退出登录
+        </Button>
+      </Link>
     </div>
   );
 

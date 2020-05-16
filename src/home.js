@@ -24,6 +24,10 @@ import ProfileHeader from "./components/profile-popover";
 import AddNewArticle from "./components/add-article";
 import MailHeader from "./components/mail-header";
 import Author from "./components/author";
+import AllTopTopics from "./components/all-top-topics";
+import Message from "./components/message";
+import Profile from "./components/profile";
+import Login from "./components/login";
 
 import { HomeOutlined } from "@ant-design/icons";
 import AllHotAuthors from "./components/all-hot-authors";
@@ -60,9 +64,14 @@ export default function Home() {
             </Menu>
           </div>
         </Header>
+
         <Content>
           <Route path="/" component={MainContent} exact />
           <Route path="/all-hot-authors" component={AllHotAuthors} exact />
+          <Route path="/all-top-topics" component={AllTopTopics} exact />
+          <Route path="/message" component={Message} exact />
+          <Route path="/profile" component={Profile} exact />
+          <Route path="/login" component={Login} exact />
         </Content>
         <Footer className="align-center">Footer content goes here...</Footer>
       </Layout>

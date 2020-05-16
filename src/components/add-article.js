@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Button, Dropdown, Menu } from "antd";
+import { Button, Dropdown, Menu, Modal } from "antd";
 import {
   FileImageOutlined,
   FileOutlined,
@@ -8,27 +8,102 @@ import {
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
+import AddArticleContent from "./addarticle-content";
+import AddImageContent from "./addimage-content";
+
+class Addarticle extends React.Component {
+  state = { visible: false };
+
+  showModal = () => {
+    this.setState({
+      visible: true
+    });
+  };
+
+  handleOk = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
+
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <Button type="link" onClick={this.showModal}>
+          <FileOutlined /> 文章投稿
+        </Button>
+        <Modal
+          title="文章投稿"
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+        >
+          <AddArticleContent />
+        </Modal>
+      </div>
+    );
+  }
+}
+
+class Addpic extends React.Component {
+  state = { visible: false };
+
+  showModal = () => {
+    this.setState({
+      visible: true
+    });
+  };
+
+  handleOk = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
+
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <Button type="link" onClick={this.showModal}>
+          <FileOutlined /> 图片投稿
+        </Button>
+        <Modal
+          title="图片投稿"
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+        >
+          <AddImageContent />
+        </Modal>
+      </div>
+    );
+  }
+}
 
 export default function AddNewArticle() {
   const menuarticle = (
     <Menu>
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.alipay.com/"
-        >
-          <FileImageOutlined /> 图片投稿
-        </a>
+        <Addpic />
       </Menu.Item>
+
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.taobao.com/"
-        >
-          <FileOutlined /> 文章投稿
-        </a>
+        <Addarticle />
       </Menu.Item>
     </Menu>
   );
