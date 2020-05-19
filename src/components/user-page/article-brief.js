@@ -15,7 +15,7 @@ import {
 } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "../index.css";
+
 import {
   CrownOutlined,
   HeartOutlined,
@@ -25,69 +25,12 @@ import {
   MailOutlined,
   SmileOutlined
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
 
-export default function Author() {
-  const content = (
-    <div className="author-popover">
-      {" "}
-      <Avatar className="margin-bt-sm" size={64} icon={<UserOutlined />} />
-      <p>作者昵称</p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
-        bibendum laoreet.
-      </p>
-      <Divider />
-      <Row className="align-center">
-        <Col span={8}>
-          {" "}
-          <h3>关注 102</h3>
-        </Col>
-
-        <Col span={8}>
-          <h3>粉丝 326</h3>
-        </Col>
-        <Col span={8}>
-          <h3>投稿 35</h3>
-        </Col>
-      </Row>
-      <Button type="primary" size="small" className="margin-sm">
-        <SmileOutlined />
-        关注
-      </Button>
-      <Button size="small" className="margin-sm">
-        <MailOutlined /> 私信
-      </Button>
-      <Link to="/user">
-        <Button size="small" className="margin-sm">
-          <MailOutlined /> 查看主页
-        </Button>
-      </Link>
-    </div>
-  );
+export default function ArticleBrief() {
   return (
     <Card className="margin-1">
       <Row>
-        <Col className="align-center" span={4}>
-          <Popover content={content}>
-            {" "}
-            <Avatar
-              className="margin-bt-sm"
-              size={64}
-              icon={<UserOutlined />}
-            />
-          </Popover>
-          <br /> 作者昵称
-          <div className="icons-list">
-            <HeartOutlined className="margin-sm" />
-            <HeartOutlined className="margin-sm" />
-            <HeartOutlined className="margin-sm" />
-          </div>
-          <Button type="primary" size="small">
-            <SmileOutlined /> 关注
-          </Button>
-        </Col>
-        <Col span={20} className="align-left">
+        <Col className="align-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
           et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis

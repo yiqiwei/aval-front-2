@@ -158,3 +158,16 @@ div#root {
   background: #ddd;
   margin-top: 10px;
 }
+.thumbnail-img {
+  max-width: 80px;
+  margin: 5px;
+}
+
+.recharge-gap {
+  margin-bottom: 20px;
+}
+
+.recharge-period:hover {
+  background: #55cfcd;
+  cursor: pointer;
+}

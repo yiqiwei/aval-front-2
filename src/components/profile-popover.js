@@ -51,12 +51,16 @@ export default function ProfileHeader() {
           个人中心
         </Button>
       </Link>
-      <Button type="primary" size="small" className="margin-sm">
-        我的收藏
-      </Button>
-      <Button size="small" type="primary" className="margin-sm">
-        充值中心
-      </Button>
+      <Link to="/user">
+        <Button type="primary" size="small" className="margin-sm">
+          我的收藏
+        </Button>
+      </Link>
+      <Link to="/recharge">
+        <Button size="small" type="primary" className="margin-sm">
+          充值中心
+        </Button>
+      </Link>
       <Link to="/login" replace>
         <Button size="small" type="primary" className="margin-sm">
           退出登录

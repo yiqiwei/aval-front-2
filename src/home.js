@@ -15,7 +15,8 @@ import {
   Menu,
   Badge,
   Dropdown,
-  Popover
+  Popover,
+  BackTop
 } from "antd";
 import SearchNav from "./components/search";
 import MainContent from "./components/main-content";
@@ -25,12 +26,17 @@ import AddNewArticle from "./components/add-article";
 import MailHeader from "./components/mail-header";
 import Author from "./components/author";
 import AllTopTopics from "./components/all-top-topics";
-import Message from "./components/message";
+
 import Profile from "./components/profile";
 import Login from "./components/login";
 
 import { HomeOutlined } from "@ant-design/icons";
 import AllHotAuthors from "./components/all-hot-authors";
+import Messagetab from "./components/message/message";
+import TopicCenter from "./components/topic-center/topic-center";
+import UserPage from "./components/user-page/user-page";
+import Recharge from "./components/recharge/recharge";
+import SignUp from "./components/signup/signup";
 
 const { Header, Footer, Content } = Layout;
 
@@ -69,11 +75,18 @@ export default function Home() {
           <Route path="/" component={MainContent} exact />
           <Route path="/all-hot-authors" component={AllHotAuthors} exact />
           <Route path="/all-top-topics" component={AllTopTopics} exact />
-          <Route path="/message" component={Message} exact />
+          <Route path="/login" component={Login} replace />
           <Route path="/profile" component={Profile} exact />
-          <Route path="/login" component={Login} exact />
+          <Route path="/sign-up" component={SignUp} exact />
+          <Route path="/message" component={Messagetab} exact />
+          <Route path="/topic-center" component={TopicCenter} exact />
+          <Route path="/user" component={UserPage} exact />
+          <Route path="/recharge" component={Recharge} exact />
         </Content>
-        <Footer className="align-center">Footer content goes here...</Footer>
+        <Footer className="align-center">
+          Footer content goes here...
+          <BackTop />
+        </Footer>
       </Layout>
     </Router>
   );

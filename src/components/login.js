@@ -6,7 +6,6 @@ import "antd/dist/antd.css";
 import "../index.css";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Home from "../home";
 
 const Loginform = () => {
   const onFinish = values => {
@@ -62,11 +61,13 @@ const Loginform = () => {
               登陆
             </Button>
           </Link>
-          <Button className="margin-t" block>
-            注册
-          </Button>
+          <Link to="/sign-up">
+            {" "}
+            <Button className="margin-t" block>
+              注册
+            </Button>
+          </Link>
         </Form.Item>
-        <Route path="/" component={Home} exact />
       </Router>
     </Form>
   );
