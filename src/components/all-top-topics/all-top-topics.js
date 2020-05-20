@@ -15,7 +15,7 @@ import {
   Pagination
 } from "antd";
 import "antd/dist/antd.css";
-import "../index.css";
+
 import {
   UserOutlined,
   SmileOutlined,

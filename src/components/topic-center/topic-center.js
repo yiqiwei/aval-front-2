@@ -12,7 +12,7 @@ import {
 
 import Hotcontent from "../hotcontent";
 import Toptopic from "../toptopic";
-import AllTopTopics from "../all-top-topics";
+import AllTopTopics from "../all-top-topics/all-top-topics";
 
 import Author from "../author";
 

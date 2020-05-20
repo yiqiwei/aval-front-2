@@ -8,7 +8,6 @@ import { FireOutlined, FileTextOutlined } from "@ant-design/icons";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import AllHotAuthors from "./all-hot-authors";
 import Home from "../home";
 
 export default function Hotcontent() {

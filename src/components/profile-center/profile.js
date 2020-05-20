@@ -12,10 +12,10 @@ import {
   Input,
   DatePicker,
   Form,
-  Tooltip,
-  Cascader,
+  Layout,
+  Sider,
   Select,
-  Checkbox,
+  Content,
   AutoComplete
 } from "antd";
 import {
@@ -27,7 +27,7 @@ import {
   QuestionCircleOutlined
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "../index.css";
+
 import { ThunderboltOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
@@ -151,18 +151,6 @@ const PersonalProfile = () => {
     </Form.Item>
   );
 
-  const bloodtype = (
-    <Form.Item name="bloodtype" noStyle>
-      <Select>
-        <Option value="A">A</Option>
-        <Option value="B">B</Option>
-        <Option value="AB">AB</Option>
-        <Option value="O">O</Option>
-        <Option value="other">其他</Option>
-      </Select>
-    </Form.Item>
-  );
-
   return (
     <Form
       {...formItemLayout}
@@ -174,23 +162,6 @@ const PersonalProfile = () => {
       }}
       scrollToFirstError
     >
-      <Form.Item
-        name="email"
-        label="绑定邮箱"
-        rules={[
-          {
-            type: "email",
-            message: "请输入正确的邮箱"
-          }
-        ]}
-      >
-        <Input />
-      </Form.Item>
-
-      <Form.Item name="birthdate" label="出生日期" hasFeedback>
-        <DatePicker />
-      </Form.Item>
-
       <Form.Item
         name="nickname"
         label="昵称"
@@ -205,6 +176,10 @@ const PersonalProfile = () => {
         <Input />
       </Form.Item>
 
+      <Form.Item name="birthdate" label="出生日期" hasFeedback>
+        <DatePicker />
+      </Form.Item>
+
       <Form.Item name="phone" label="绑定手机">
         <Input
           addonBefore={prefixSelector}
@@ -214,12 +189,27 @@ const PersonalProfile = () => {
         />
       </Form.Item>
 
-      <Form.Item name="bloodtype" label="血型">
-        <Select placeholder="请选择血型" allowClear>
-          <Option value="A">A</Option>
-          <Option value="B">B</Option>
-          <Option value="AB">AB</Option>
-          <Option value="O">O</Option>
+      <Form.Item
+        name="email"
+        label="绑定邮箱"
+        rules={[
+          {
+            type: "email",
+            message: "请输入正确的邮箱"
+          }
+        ]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item name="academic-degree" label="最高学位">
+        <Select placeholder="请选择学位" allowClear>
+          <Option value="primary-school">小学</Option>
+          <Option value="junior-high">初中</Option>
+          <Option value="senior-high">高中</Option>
+          <Option value="bachelor">本科</Option>
+          <Option value="master">硕士</Option>
+          <Option value="phd">博士</Option>
           <Option value="other">其他</Option>
         </Select>
       </Form.Item>
@@ -234,52 +224,25 @@ const PersonalProfile = () => {
 
       <Form.Item name="sex" label="性别">
         <Select placeholder="请选择性别" allowClear>
-          <Option value="A">男</Option>
-          <Option value="B">女</Option>
-          <Option value="AB">保密</Option>
+          <Option value="male">男</Option>
+          <Option value="female">女</Option>
+          <Option value="none">保密</Option>
         </Select>
       </Form.Item>
 
       <Form.Item name="permission" label="个人信息访问权限">
         <Select placeholder="请选择访问权限" allowClear>
-          <Option value="A">全部可见</Option>
-          <Option value="B">关注可见</Option>
-          <Option value="AB">仅自己可见</Option>
+          <Option value="visible-for-all">全部可见</Option>
+          <Option value="visible-for-fans">关注可见</Option>
+          <Option value="visible-for-me">仅自己可见</Option>
         </Select>
       </Form.Item>
 
-      <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit">
-          修改
-        </Button>
-      </Form.Item>
-    </Form>
-  );
-};
-
-const SocialProfile = () => {
-  const [form] = Form.useForm();
-
-  const onFinish = values => {
-    console.log("Received values of form: ", values);
-  };
-
-  return (
-    <Form
-      {...formItemLayout}
-      form={form}
-      name="personalprofile"
-      onFinish={onFinish}
-      initialValues={{
-        prefix: "86"
-      }}
-      scrollToFirstError
-    >
-      <Form.Item name="permission" label="社交信息访问权限">
-        <Select placeholder="请选择访问权限" allowClear>
-          <Option value="A">全部可见</Option>
-          <Option value="B">关注可见</Option>
-          <Option value="AB">仅自己可见</Option>
+      <Form.Item name="permission" label="社交信息可见权限">
+        <Select placeholder="请选择社交信息可见权限" allowClear>
+          <Option value="visible-for-all">全部可见</Option>
+          <Option value="visible-for-fans">关注可见</Option>
+          <Option value="visible-for-me">仅自己可见</Option>
         </Select>
       </Form.Item>
 
@@ -334,30 +297,39 @@ const SocialProfile = () => {
           关联
         </Button>
       </Form.Item>
+
+      <Form.Item {...tailFormItemLayout}>
+        <Button type="primary" htmlType="submit">
+          修改
+        </Button>
+      </Form.Item>
     </Form>
   );
 };
 
 export default function Profile() {
+  const { TabPane } = Tabs;
   return (
-    <Row className="mainwidth">
-      <Col span={12}>
-        <Card className="margin-1" title="基本信息">
-          <Row>
-            <Col span={4} className="gap">
-              <AvatarUpload />
-            </Col>
-            <Col span={18}>
-              <PersonalProfile />
-            </Col>
-          </Row>
-        </Card>
-      </Col>
-      <Col span={12}>
-        <Card title="社交信息" className="margin-1">
-          <SocialProfile />
-        </Card>
-      </Col>
+    <Row className="mainwidth margin-1">
+      <div>
+        <Tabs tabPosition="left">
+          <TabPane tab="个人基本信息" key="1">
+            <Card className="margin-1" title="基本信息">
+              <Row>
+                <Col span={4} className="gap">
+                  <AvatarUpload />
+                </Col>
+                <Col span={18}>
+                  <PersonalProfile />
+                </Col>
+              </Row>
+            </Card>
+          </TabPane>
+          <TabPane tab="xxxxxxx" key="2">
+            Content of Tab 2
+          </TabPane>
+        </Tabs>
+      </div>
     </Row>
   );
 }

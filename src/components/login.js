@@ -67,6 +67,12 @@ const Loginform = () => {
               注册
             </Button>
           </Link>
+          <br />
+          <br />
+
+          <Link to="/forgot-password" className="margin-t">
+            忘记密码？
+          </Link>
         </Form.Item>
       </Router>
     </Form>

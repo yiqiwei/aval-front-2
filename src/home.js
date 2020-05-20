@@ -25,18 +25,19 @@ import ProfileHeader from "./components/profile-popover";
 import AddNewArticle from "./components/add-article";
 import MailHeader from "./components/mail-header";
 import Author from "./components/author";
-import AllTopTopics from "./components/all-top-topics";
+import AllTopTopics from "./components/all-top-topics/all-top-topics";
 
-import Profile from "./components/profile";
+import Profile from "./components/profile-center/profile";
 import Login from "./components/login";
 
 import { HomeOutlined } from "@ant-design/icons";
-import AllHotAuthors from "./components/all-hot-authors";
+import AllHotAuthors from "./components/all-hot-authors/all-hot-authors";
 import Messagetab from "./components/message/message";
 import TopicCenter from "./components/topic-center/topic-center";
 import UserPage from "./components/user-page/user-page";
 import Recharge from "./components/recharge/recharge";
 import SignUp from "./components/signup/signup";
+import ForgotPassword from "./components/forgot-password";
 
 const { Header, Footer, Content } = Layout;
 
@@ -82,6 +83,7 @@ export default function Home() {
           <Route path="/topic-center" component={TopicCenter} exact />
           <Route path="/user" component={UserPage} exact />
           <Route path="/recharge" component={Recharge} exact />
+          <Route path="/forgot-password" component={ForgotPassword} exact />
         </Content>
         <Footer className="align-center">
           Footer content goes here...
