@@ -14,7 +14,9 @@ import {
   Card,
   Pagination,
   Upload,
-  Modal
+  Modal,
+  Input,
+  Select
 } from "antd";
 import "antd/dist/antd.css";
 import {
@@ -34,18 +36,7 @@ import SearchNav from "../search";
 
 import ArticleBrief from "./article-brief";
 
-function handleMenuClick(e) {
-  message.info("Click on menu item.");
-  console.log("click", e);
-}
-
-const menutype = (
-  <Menu onClick={handleMenuClick}>
-    <Menu.Item key="1">全部作品</Menu.Item>
-    <Menu.Item key="2">图片作品</Menu.Item>
-    <Menu.Item key="3">文章作品</Menu.Item>
-  </Menu>
-);
+const { Option } = Select;
 
 export default function UserPage() {
   return (
@@ -126,11 +117,17 @@ export default function UserPage() {
         </Col>
         <Col span={16}>
           <Card className="margin-1">
-            <Dropdown overlay={menutype}>
-              <Button>
-                全部作品 <DownOutlined />
-              </Button>
-            </Dropdown>
+            <Select
+              style={{
+                width: 120,
+                margin: "0 8px"
+              }}
+              defaultValue="all-portfolios"
+            >
+              <Option value="all-portfolios">全部作品</Option>
+              <Option value="pic-portfolios">图片作品</Option>
+              <Option value="pic-portfolios">文章作品</Option>
+            </Select>
             <div className="align-right">
               <SearchNav />
             </div>
