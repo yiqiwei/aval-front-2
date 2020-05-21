@@ -1,19 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Form,
-  Input,
-  Button,
-  Checkbox,
-  Card,
-  Col,
-  Row,
-  Avatar,
-  Tag,
-  Popover,
-  Divider
-} from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Button, Col, Row, Avatar, Popover } from "antd";
+
 import "antd/dist/antd.css";
 import "../index.css";
 import { ShakeOutlined } from "@ant-design/icons";

@@ -1,19 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Form,
-  Input,
-  Button,
-  Checkbox,
-  Card,
-  Col,
-  Row,
-  Avatar,
-  Tag,
-  Popover,
-  Divider
-} from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+
+import { Card, Col, Row, Avatar, Tag } from "antd";
+
 import "antd/dist/antd.css";
 
 import {
@@ -21,9 +9,7 @@ import {
   HeartOutlined,
   LikeOutlined,
   MessageOutlined,
-  RotateRightOutlined,
-  MailOutlined,
-  SmileOutlined
+  RotateRightOutlined
 } from "@ant-design/icons";
 
 export default function ArticleBrief() {

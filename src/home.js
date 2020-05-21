@@ -1,30 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import "antd/dist/antd.css";
 import "./index.css";
-import {
-  Col,
-  Row,
-  Avatar,
-  Button,
-  Divider,
-  Layout,
-  Menu,
-  Badge,
-  Dropdown,
-  Popover,
-  BackTop
-} from "antd";
+import { Layout, Menu, BackTop } from "antd";
 import SearchNav from "./components/search";
 import MainContent from "./components/main-content";
 import TaskHeader from "./components/taskheader";
 import ProfileHeader from "./components/profile-popover";
 import AddNewArticle from "./components/add-article";
 import MailHeader from "./components/mail-header";
-import Author from "./components/author";
+
 import AllTopTopics from "./components/all-top-topics/all-top-topics";
 
 import Profile from "./components/profile-center/profile";

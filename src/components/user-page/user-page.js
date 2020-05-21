@@ -1,34 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import {
   Col,
   Row,
   Avatar,
   Button,
   Divider,
-  Layout,
-  Menu,
-  Badge,
-  Dropdown,
-  Popover,
   Card,
   Pagination,
-  Upload,
-  Modal,
-  Input,
   Select
 } from "antd";
 import "antd/dist/antd.css";
 import {
   UserOutlined,
   SmileOutlined,
-  RotateRightOutlined,
   MailOutlined,
   WeiboOutlined,
   WechatOutlined,
   EllipsisOutlined,
-  TaobaoCircleOutlined,
-  DownOutlined
+  TaobaoCircleOutlined
 } from "@ant-design/icons";
 
 import ImageWall from "./image-wall";

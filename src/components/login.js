@@ -1,10 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Form, Input, Button, Checkbox, Card, Row, Col } from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Form, Input, Button, Checkbox, Row, Col } from "antd";
+
 import "antd/dist/antd.css";
 import "../index.css";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Loginform = () => {

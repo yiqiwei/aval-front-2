@@ -1,14 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Card, Col, Row, Avatar, Tabs, Pagination } from "antd";
-import "antd/dist/antd.css";
 
-import {
-  MessageOutlined,
-  LikeOutlined,
-  StarOutlined,
-  CrownOutlined
-} from "@ant-design/icons";
+import { Col, Row } from "antd";
+import "antd/dist/antd.css";
 
 import Hotcontent from "../hotcontent";
 import Toptopic from "../toptopic";

@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import "antd/dist/antd.css";
-import { Form, Input, InputNumber, Button, Card, Checkbox } from "antd";
+import { Form, Input, Button, Card, Checkbox } from "antd";
 
 const layout = {
   labelCol: {
@@ -11,16 +11,6 @@ const layout = {
     span: 16
   }
 };
-const validateMessages = {
-  required: "${label} is required!",
-  types: {
-    email: "${label} is not validate email!",
-    number: "${label} is not a validate number!"
-  },
-  number: {
-    range: "${label} must be between ${min} and ${max}"
-  }
-};
 
 const SignupForm = () => {
   const onFinish = values => {
@@ -28,12 +18,7 @@ const SignupForm = () => {
   };
 
   return (
-    <Form
-      {...layout}
-      name="nest-messages"
-      onFinish={onFinish}
-      validateMessages={validateMessages}
-    >
+    <Form {...layout} name="nest-messages" onFinish={onFinish}>
       <Form.Item
         name={["user", "mobile"]}
         label="手机号码"
@@ -84,9 +69,7 @@ const SignupForm = () => {
       </Form.Item>
 
       <Form.Item name={["user", "agreement"]}>
-        <Checkbox>
-          勾选表示我已同意 <a href="">平台合作协议</a>
-        </Checkbox>
+        <Checkbox>勾选表示我已同意平台合作协议</Checkbox>
       </Form.Item>
     </Form>
   );

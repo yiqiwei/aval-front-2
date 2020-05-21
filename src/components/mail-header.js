@@ -1,10 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Button, Dropdown, Menu, Badge } from "antd";
+
+import { Dropdown, Menu, Badge } from "antd";
 import {
   FileImageOutlined,
   FileOutlined,
-  EditOutlined,
   LikeOutlined,
   StarOutlined,
   MailOutlined

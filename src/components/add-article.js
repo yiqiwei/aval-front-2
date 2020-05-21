@@ -1,11 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import { Button, Dropdown, Menu, Modal } from "antd";
-import {
-  FileImageOutlined,
-  FileOutlined,
-  EditOutlined
-} from "@ant-design/icons";
+import { FileOutlined, EditOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
 import AddArticleContent from "./addarticle-content";

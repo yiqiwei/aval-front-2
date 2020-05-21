@@ -1,10 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import {
   Card,
   Col,
   Row,
-  Avatar,
   Tabs,
   Button,
   Upload,
@@ -12,24 +11,10 @@ import {
   Input,
   DatePicker,
   Form,
-  Layout,
-  Sider,
-  Select,
-  Content,
-  AutoComplete
+  Select
 } from "antd";
-import {
-  FileOutlined,
-  RobotOutlined,
-  FileTextOutlined,
-  LoadingOutlined,
-  PlusOutlined,
-  QuestionCircleOutlined
-} from "@ant-design/icons";
+import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-
-import { ThunderboltOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
 
 function getBase64(img, callback) {
   const reader = new FileReader();

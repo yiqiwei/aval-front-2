@@ -1,19 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Col,
-  Row,
-  Avatar,
-  Button,
-  Divider,
-  Layout,
-  Menu,
-  Badge,
-  Dropdown,
-  Popover,
-  Card,
-  Pagination
-} from "antd";
+
+import { Col, Row, Avatar, Button, Divider, Card, Pagination } from "antd";
 import "antd/dist/antd.css";
 
 import {

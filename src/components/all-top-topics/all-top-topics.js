@@ -1,26 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Col,
-  Row,
-  Avatar,
-  Button,
-  Divider,
-  Layout,
-  Menu,
-  Badge,
-  Dropdown,
-  Popover,
-  Card,
-  Pagination
-} from "antd";
-import "antd/dist/antd.css";
 
-import {
-  UserOutlined,
-  SmileOutlined,
-  RotateRightOutlined
-} from "@ant-design/icons";
+import { Col, Row, Avatar, Button, Divider, Card } from "antd";
+import "antd/dist/antd.css";
 
 export default function AllTopTopics() {
   return (

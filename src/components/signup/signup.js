@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import "antd/dist/antd.css";
-import { Steps, Button, message, Row, Card } from "antd";
+import { Steps, Button, message, Card } from "antd";
 import Step1 from "./step1";
 import Step2 from "./step2";
 import Step3 from "./step3";

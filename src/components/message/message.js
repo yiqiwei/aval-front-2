@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Card, Col, Row, Avatar, Tabs, Pagination } from "antd";
+
+import { Card, Col, Row, Tabs } from "antd";
 import "antd/dist/antd.css";
 
 import {

@@ -1,11 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Card, Col, Row, Avatar, Tabs, Button } from "antd";
-import {
-  FileOutlined,
-  RobotOutlined,
-  FileTextOutlined
-} from "@ant-design/icons";
+
+import { Card, Col, Row, Tabs, Button } from "antd";
+import { FileOutlined, FileTextOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
 import { ThunderboltOutlined } from "@ant-design/icons";

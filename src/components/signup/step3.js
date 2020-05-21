@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import "antd/dist/antd.css";
-import { Steps, Button, message, Card } from "antd";
+import { Button, Card } from "antd";
 import { CheckCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 

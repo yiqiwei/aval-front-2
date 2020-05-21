@@ -1,32 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Col,
-  Row,
-  Avatar,
-  Button,
-  Divider,
-  Layout,
-  Menu,
-  Badge,
-  Dropdown,
-  Popover,
-  Card,
-  Pagination,
-  Upload,
-  Modal
-} from "antd";
+
+import { Upload, Modal } from "antd";
 import "antd/dist/antd.css";
-import {
-  UserOutlined,
-  SmileOutlined,
-  RotateRightOutlined,
-  MailOutlined,
-  WeiboOutlined,
-  WechatOutlined,
-  EllipsisOutlined,
-  TaobaoCircleOutlined
-} from "@ant-design/icons";
+
+function getBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
+}
 
 class PicturesWall extends React.Component {
   state = {

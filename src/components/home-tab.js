@@ -1,24 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Card,
-  Col,
-  Row,
-  Avatar,
-  Tabs,
-  Pagination,
-  List,
-  Spin,
-  message
-} from "antd";
+
+import { Card, Tabs, List, Spin, message } from "antd";
 import "antd/dist/antd.css";
 import "../index.css";
-import {
-  CrownOutlined,
-  HeartOutlined,
-  ShoppingCartOutlined,
-  TagsOutlined
-} from "@ant-design/icons";
+import { CrownOutlined, HeartOutlined, TagsOutlined } from "@ant-design/icons";
 import Author from "./author";
 import reqwest from "reqwest";
 import InfiniteScroll from "react-infinite-scroller";

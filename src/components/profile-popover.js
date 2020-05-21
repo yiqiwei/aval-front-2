@@ -1,23 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Form,
-  Input,
-  Button,
-  Checkbox,
-  Card,
-  Col,
-  Row,
-  Avatar,
-  Tag,
-  Popover,
-  Divider,
-  Progress
-} from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+
+import { Button, Col, Row, Avatar, Popover, Divider, Progress } from "antd";
+import { UserOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "../index.css";
-import { ShakeOutlined } from "@ant-design/icons";
+
 import { Link } from "react-router-dom";
 
 export default function ProfileHeader() {

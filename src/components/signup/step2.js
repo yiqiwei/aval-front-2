@@ -1,16 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import "antd/dist/antd.css";
-import {
-  Form,
-  Input,
-  InputNumber,
-  Button,
-  Card,
-  Checkbox,
-  Radio,
-  Row
-} from "antd";
+import { Form, Card, Radio, Row } from "antd";
 
 const layout = {
   labelCol: {

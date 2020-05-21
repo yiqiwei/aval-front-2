@@ -1,17 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import "antd/dist/antd.css";
 import "../index.css";
-import { Layout, Menu, Breadcrumb, Card, Row, Col, Pagination } from "antd";
+import { Layout, Row, Col } from "antd";
 import Imgslider from "./imgslider";
 
-import Author from "./author";
 import Hotcontent from "./hotcontent";
 import Toptopic from "./toptopic";
 import HomeTab from "./home-tab";
 import HomeShoppingTab from "./home-shopping-tab";
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 export default function MainContent() {
   return (

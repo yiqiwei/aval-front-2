@@ -1,33 +1,22 @@
 import React, { createElement, useState } from "react";
-import ReactDOM from "react-dom";
+
 import "antd/dist/antd.css";
 
-import { Comment, Tooltip, Avatar, Form, Button, List, Input, Row } from "antd";
+import { Comment, Tooltip, Avatar, Form, Button, List, Input } from "antd";
 import moment from "moment";
-import {
-  UserOutlined,
-  LikeOutlined,
-  DislikeFilled,
-  LikeFilled
-} from "@ant-design/icons";
+import { UserOutlined, LikeOutlined, LikeFilled } from "@ant-design/icons";
 
 const { TextArea } = Input;
 
 const Commentitem = () => {
   const [likes, setLikes] = useState(0);
-  const [dislikes, setDislikes] = useState(0);
+  const [setDislikes] = useState(0);
   const [action, setAction] = useState(null);
 
   const like = () => {
     setLikes(1);
     setDislikes(0);
     setAction("liked");
-  };
-
-  const dislike = () => {
-    setLikes(0);
-    setDislikes(1);
-    setAction("disliked");
   };
 
   const actions = [
@@ -45,7 +34,7 @@ const Commentitem = () => {
   return (
     <Comment
       actions={actions}
-      author={<a>昵称</a>}
+      author={"昵称"}
       avatar={
         <Avatar className="margin-bt-sm" size={32} icon={<UserOutlined />} />
       }

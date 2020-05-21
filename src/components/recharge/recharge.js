@@ -1,41 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  Col,
-  Row,
-  Avatar,
-  Button,
-  Divider,
-  Layout,
-  Menu,
-  Badge,
-  Dropdown,
-  Popover,
-  Card,
-  Pagination,
-  Upload,
-  Modal,
-  Radio,
-  Input
-} from "antd";
+
+import { Col, Row, Avatar, Button, Divider, Card, Radio, Input } from "antd";
 import "antd/dist/antd.css";
 import {
   UserOutlined,
-  SmileOutlined,
-  RotateRightOutlined,
-  MailOutlined,
-  WeiboOutlined,
-  WechatOutlined,
-  EllipsisOutlined,
   TransactionOutlined,
-  DownOutlined,
-  AuditOutlined,
   GiftOutlined,
   FilterOutlined,
   AccountBookOutlined
 } from "@ant-design/icons";
-
-import SearchNav from "../search";
 
 function onChange(e) {
   console.log(`radio checked:${e.target.value}`);

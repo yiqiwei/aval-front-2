@@ -1,17 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Card, Col, Row, Avatar, Tabs } from "antd";
-import { UserOutlined, RobotOutlined } from "@ant-design/icons";
+
+import { Card } from "antd";
+
 import "antd/dist/antd.css";
 import "../index.css";
 import { ShopOutlined } from "@ant-design/icons";
 
 export default function HomeShoppingTab() {
-  const { TabPane } = Tabs;
-
-  function callback(key) {
-    console.log(key);
-  }
   return (
     <Card
       hoverable
